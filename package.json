@@ -1,0 +1,25 @@
+{
+  "name": "proyecto_1_lenguajes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KevinLo8/Proyecto_1_Lenguajes.git"
+  },
+  "author": "Kevin López",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinLo8/Proyecto_1_Lenguajes/issues"
+  },
+  "homepage": "https://github.com/KevinLo8/Proyecto_1_Lenguajes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "graphviz": "^0.0.9"
+  }
+}
