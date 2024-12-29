@@ -27,10 +27,11 @@ export class AppComponent {
     }
 
     this.apiService.analizarCodigo(this.codigo).subscribe(
-      (res: { tokens: any[]; errores: any[] }) => {
+      (res: { tokens: any[]; errores: any[]; textoConsola: any }) => {
         this.lexemas = res.tokens || [];
         this.errores = res.errores || [];
         this.imprimirEnConsola();
+        this.consola += "\n" + res.textoConsola + "\n";
       },
       (err: any) => {
         console.error('Error al analizar el código:', err);
@@ -71,7 +72,6 @@ export class AppComponent {
     }
 
     this.direccion = file.name;
-    this.consola = 'file: ' + file.name;
 
     const reader = new FileReader();
     reader.onload = (e) => {

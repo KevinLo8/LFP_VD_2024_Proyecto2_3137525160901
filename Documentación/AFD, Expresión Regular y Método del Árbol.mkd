@@ -1,0 +1,42 @@
+# Palabras
+
+## Expresión Regular
+
+#### ([a-z][A-Z])+
+
+## Método del Árbol y AFN
+
+![alt text](Imagenes/Palabras.png)
+
+# Cadenas
+
+## Expresión Regular
+
+#### '"' (^['"'])+ '"'
+
+![alt text](Imagenes/Cadenas.png)
+
+# Numeros
+
+## Expresión Regular
+
+#### [0-9]+ ('.' [0-9]+)?
+
+![alt text](Imagenes/Numeros.png)
+
+# Comentarios De Una Linea
+
+## Expresión Regular
+
+#### "//"(^[\n\r\b\t])+
+
+![alt text](Imagenes/ComentarioUnaLinea.png)
+
+# Comentarios De Multiples Lineas
+
+## Expresión Regular
+
+#### "/&ast;" (^["&ast;/]")+ "&ast;/"
+
+![alt text](Imagenes/ComentarioMultiLinea.png)
+

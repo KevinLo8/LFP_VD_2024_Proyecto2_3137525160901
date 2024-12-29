@@ -1,7 +1,7 @@
 class Configuracion {
 
     getFondo() {
-        return fondo;
+        return this.fondo;
     }
 
     setFondo(fondo) {
@@ -9,7 +9,7 @@ class Configuracion {
     }   
 
     getFuente() {
-        return fuente;
+        return this.fuente;
     }
 
     setFuente(fuente) {
@@ -17,7 +17,7 @@ class Configuracion {
     }
 
     getForma() {
-        return forma;
+        return this.forma;
     }
 
     setForma(forma) {
@@ -25,7 +25,7 @@ class Configuracion {
     }
 
     getTipoFuente() {
-        return tipoFuente;
+        return this.tipoFuente;
     }
 
     setTipoFuente(tipoFuente) {
@@ -33,10 +33,5 @@ class Configuracion {
     }
     
 }
-
-let fondo;
-let fuente;
-let forma;
-let tipoFuente;
 
 module.exports = Configuracion;
