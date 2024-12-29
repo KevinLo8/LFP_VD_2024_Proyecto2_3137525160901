@@ -1,0 +1,226 @@
+/*
+    Vamos a crear nuestro array de Operaciones
+    Además, esto es un comentario multilínea
+    ¿Debería de poder leer esto tranquilamente? Sí
+*/
+
+Operaciones = [
+    {
+        "operacion": "resta",
+        "nombre": "operacion1",
+        "valor1": 20.5,
+        "valor2": [
+            {
+                "operacion": "seno",
+                "valor1": 45
+            }
+        ]
+    },
+    {
+        "operacion": "multiplicacion",
+        "nombre": "operacion2",
+        "valor1": 5.2,
+        "valor2": [
+            {
+                "operacion": "coseno",
+                "valor1": 30
+            }
+        ]
+    },
+    {
+        "operacion": "suma",
+        "nombre": "operacion3",
+        "valor1": 10.0,
+        "valor2": [
+            {
+                "operacion": "multiplicacion",
+                "valor1": 3.0,
+                "valor2": [
+                    {
+                        "operacion": "raiz",
+                        "valor1": 16,
+			"valor2": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "operacion": "division",
+        "nombre": "operacion4",
+        "valor1": 50.0,
+        "valor2": [
+            {
+                "operacion": "potencia",
+                "valor1": 2,
+                "valor2": 3
+            }
+        ]
+    },
+    {
+        "operacion": "suma",
+        "nombre": "operacion5",
+        "valor1": 8.0,
+        "valor2": [
+            {
+                "operacion": "multiplicacion",
+                "valor1": 5,
+                "valor2": [
+                    {
+                        "operacion": "tangente",
+                        "valor1": 45
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "operacion": "raiz",
+        "nombre": "operacion6",
+        "valor1": [
+            {
+                "operacion": "suma",
+                "valor1": 15,
+                "valor2": [
+                    {
+                        "operacion": "multiplicacion",
+                        "valor1": 3,
+                        "valor2": [
+                            {
+                                "operacion": "resta",
+                                "valor1": 10,
+                                "valor2": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+	"valor2": 2
+    },
+    {
+        "operacion": "suma",
+        "nombre": "operacion7",
+        "valor1": 12.3,
+        "valor2": [
+            {
+                "operacion": "division",
+                "valor1": 100,
+                "valor2": [
+                    {
+                        "operacion": "potencia",
+                        "valor1": 2,
+                        "valor2": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "operacion": "multiplicacion",
+        "nombre": "operacion8",
+        "valor1": 4.5,
+        "valor2": [
+            {
+            	"operacion": "mod",
+                "valor1": 17,
+                "valor2": 5
+            }
+        ]
+    },
+    {
+        "operacion": "resta",
+        "nombre": "operacion9",
+        "valor1": 20,
+        "valor2": [
+            {
+            	"operacion": "inverso",
+                "valor1": 12
+            }
+        ]
+    },
+    {
+        "operacion": "multiplicacion",
+        "nombre": "operacion10",
+        "valor1": 5.0,
+        "valor2": [
+            {
+                "operacion": "division",
+                "valor1": [
+                    {
+                        "operacion": "potencia",
+                        "valor1": 3,
+                        "valor2": [
+                            {
+                                "operacion": "suma",
+                                "valor1": 5,
+                                "valor2": [
+                                    {
+                                        "operacion": "raiz",
+                                        "valor1": 64,
+					"valor2": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "valor2": [
+                    {
+                        "operacion": "resta",
+                        "valor1": 20,
+                        "valor2": [
+                            {
+                                "operacion": "seno",
+                                "valor1": 30
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+/*
+Resultados en Radianes
+Resultado Operación1: 19.95
+Resultado Operación2: 0.80
+Resultado Operación3: 17.56
+Resultado Operación4: 6.25
+Resultado Operación5: 16.10
+Resultado Operacion6: 6.24
+Resultado Operación7: 15.43
+Resultado Operación8: 9
+Resultado Operacion9: 19.92
+Resultado Operación10: 379817.18
+*/
+
+// Si te jalan las operaciones, ya ganaste LFP
+
+// Configuraciones para el Léxico
+ConfiguracionesLex = [
+    fondo: "#000000",
+    fuente: "#FFFFFF",
+    forma: "circle",
+    tipoFuente: "Times-Roman"
+]
+
+// Configuraciones para el sintáctico
+ConfiguracionesParser = [
+    fondo: "#f3ff00",
+    fuente: "#000000",
+    forma: "box",
+    tipoFuente: "Arial"
+]
+
+imprimir("Funciones de Reportería")
+conteo() // Te debe de devolver 10 funciones en total
+promedio("suma") // Son 6 operaciones suma en total, deberías de poderle sacar el promedio
+max("multiplicacion") // Te debe de devolver el 379817.18 de la operación 10, ya que es una multiplicación
+min("raiz") // Te debe de devolver 2.52, ya que es el valor mínimo de raíz que existe
+generarReporte("tokens") // Generamos reporte de tokens en HTML por favor, nada de consola
+generarReporte("errores","201700761") // Tu reporte de errores, tanto léxicos como sintácticos
+generarReporte("arbol", "New Arbolito") // Tús árboles, bien hechos con graphviz
+
+imprimir("Felicidades, si llegaste hasta acá, significa que ganaste LFP")
