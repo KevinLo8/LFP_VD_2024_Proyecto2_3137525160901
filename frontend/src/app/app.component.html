@@ -1,0 +1,47 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-light">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-2">NodeLex 2.0</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    <div class="input-group my-2">
+      <input type="file" class="form-control invisible" id="inputGroupFile02" (change)="abrirArchivo($event)" accept=".nlex">
+      <label class="btn btn-primary rounded mx-2" for="inputGroupFile02">Abrir</label>
+      <label type="button" class="btn btn-primary rounded mx-2" (click)="guardarArchivo()">Guardar</label>
+      <label type="button" class="btn btn-primary rounded ml-2 mr-5" (click)="guardarComo()">Guardar Como</label>
+   </div>
+</ul>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <textarea
+        class="ml-5"
+        [(ngModel)]="codigo"
+        rows="10"
+        cols="50"
+        placeholder="Escribe tu código aquí..."
+      ></textarea>
+    </div>
+    <div class="col">
+      <textarea
+        class="ml-5"
+        [(ngModel)]="consola"
+        rows="10"
+        cols="50"
+        placeholder="CMD NodeLex"
+        readonly
+      ></textarea>
+    </div>
+  </div>
+</div>
+<div class="container containerBotones">
+  <div class="row">
+    <div class="col" style="text-align: right;">
+      <button mat-raised-button type="button" class="btn btn-info" (click)="analizar()">Analizar Código</button>
+      <button mat-raised-button type="button" class="btn btn-info" (click)="limpiar()">Limpiar Consola</button>
+    </div>
+  </div>
+</div>

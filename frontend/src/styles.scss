@@ -1,0 +1,233 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('./assets/images/fondo.svg');
+    background-size: contain;
+}
+
+/*
+  You can override any CSS Variable or style here
+  Example:
+
+  :root {
+   --sidenav-background: #333333;
+  }
+
+  All possible variables can be found in @vex/styles/core or by simply inspecting the element you want to change
+  in Chrome/Firefox DevTools
+*/
+
+/**
+  Uncomment the below code and adjust the values to fit your colors, the application will automatically adjust
+ */
+:root {
+    --color-primary: 13,104,37;
+    // --color-primary-contrast: white;
+    
+    --color-accent: 167,143,94;
+  // --color-accent-contrast: black;
+
+  // --color-warn: yellow;
+  // --color-warn-contrast: black;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+
+.containerBotones {
+    padding-top: 0px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.margenBoton {
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.iconoBoton {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.dialogOverflow {
+    max-height: 80%;
+    width: 65%;
+    overflow: auto;
+}
+
+@media (max-width: 400px) {
+    .dialogOverflow {
+        max-width: 92vw !important;
+    }
+}
+
+.mat-input-element:disabled,
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+    color: black;
+}
+
+.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: rgb(246, 246, 246);
+}
+
+.mat-checkbox-disabled .mat-checkbox-label {
+    color: black
+}
+
+.mat-select-disabled .mat-select-value {
+    color: black;
+}
+
+.mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
+    background-color: #f6f6f6;
+    border-bottom: #b0a9ba solid 1px;
+}
+
+.miniaturaImagen {
+    max-width: 150px;
+    max-height: 40px;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+.hoverRow {
+    cursor: pointer !important;
+}
+
+.popover {
+    left: -276px;
+}
+
+mat-expansion-panel {
+    border: 1px #f6f5f6 solid;
+}
+
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+// * * * MatTree reportes contables * * *
+.nodoEstadoResultados {
+    width: 100%;
+    padding: 5px 0px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.lineaTotal {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #f3feff;
+}
+
+.totalPositivo {
+    color: green;
+}
+
+.totalNegativo {
+    color: red;
+}
+
+.mat-tree-node {
+    min-height: 0px;
+}
+
+.logoLogin {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.logoSidenav {
+    max-width: 100px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.fuenteInicioWidget {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.fuenteInicioWidgetSub {
+    font-size: 14px;
+    line-height: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-primary {
+    color: rgb(158, 197, 28) !important;
+}
+
+.text-accent {
+    color: rgb(1, 51, 82) !important;
+}
+
+table.tablaEstilos {
+    width: 100%;
+}
+
+.tablaEstilos tr td {
+    padding: 8px;
+    border: 1px #e2e1e2 solid;
+}
+
+.tablaEstilos tr th {
+    padding: 8px;
+    border: 1px #e2e1e2 solid;
+    font-size: small;
+}
+
+.tableInput {
+    width: 100%;
+    border: 1px #e2e1e2 solid;
+    border-radius: 6px;
+    padding: 2px 10px;
+    box-sizing: border-box;
+}
+
+.tableInputReducido {
+    width: 100%;
+    border: 1px #e2e1e2 solid;
+    border-radius: 6px;
+    padding: 2px 10px;
+    box-sizing: border-box;
+}
+
+.filaTotal, .tablaEstilos th {
+    font-weight: bold;
+    background-color: #f7f7f7;
+    font-size: 16px;
+}
+
+.totalValor {
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+.mat-expansion-panel-header[aria-disabled=true] {
+    color: rgb(14 14 14);
+}
+
+.noMarginSelect mat-form-field {
+    margin-bottom: -1.34375em;
+}
+
+.quitarPaddingInput .mat-form-field-wrapper {
+    margin-bottom: -1.34375em;
+}
+
+.thumbnailImagen {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
