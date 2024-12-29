@@ -1,24 +1,28 @@
 digraph G {
-  "1" [ label = "6", style = "filled" ];
-  "2" [ label = "3", style = "filled" ];
-  "3" [ label = "2", style = "filled" ];
+  "1" [ label = "6", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "2" [ label = "3", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "3" [ label = "2", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "4" [ label = "seno
-0.8939966636005579", style = "filled" ];
-  "5" [ label = "90", style = "filled" ];
-  "6" [ label = "2", style = "filled" ];
+0.8939966636005579", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "5" [ label = "90", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "6" [ label = "2", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "7" [ label = "multiplicacion
-31.622776601683796", style = "filled" ];
-  "8" [ label = "10", style = "filled" ];
+31.622776601683796", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "8" [ label = "10", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "9" [ label = "raiz
-3.1622776601683795", style = "filled" ];
-  "10" [ label = "10", style = "filled" ];
-  "11" [ label = "2", style = "filled" ];
+3.1622776601683795", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "10" [ label = "10", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "11" [ label = "2", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "12" [ label = "100", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "13" [ label = "9", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "operacion1" [ label = "resta
-3", style = "filled" ];
+3", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "operacion2" [ label = "multiplicacion
-1.7879933272011157", style = "filled" ];
+1.7879933272011157", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "operacion3" [ label = "suma
-33.622776601683796", style = "filled" ];
+33.622776601683796", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
+  "operacion4" [ label = "mod
+1", fillcolor = "#000000", style = "filled", fontcolor = "#ffffff", shape =circle, fontname = "Times-Roman" ];
   "operacion1" -> "1";
   "operacion1" -> "2";
   "operacion2" -> "3";
@@ -30,4 +34,6 @@ digraph G {
   "9" -> "11";
   "7" -> "9";
   "operacion3" -> "7";
+  "operacion4" -> "12";
+  "operacion4" -> "13";
 }

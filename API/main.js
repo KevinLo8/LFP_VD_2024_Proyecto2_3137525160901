@@ -20,7 +20,8 @@ app.use(express.text());
 app.use(cors());
 
 app.post('/Analizar', (req, res) => {
-        try {
+    consola = '';
+    try {
         
         datos = new Datos();
 
@@ -38,7 +39,7 @@ app.post('/Analizar', (req, res) => {
 
         analizarFunciones();
 
-        res.status(201).json({tokens: anLex.getTokens(), errores: anSin.getErrores()});
+        res.status(201).json({tokens: anLex.getTokens(), errores: anSin.getErrores() , textoConsola: consola});
     } catch (error) {
         res.status(500).json('Error al analizar el texto');
     }
@@ -50,21 +51,26 @@ function analizarFunciones() {
         switch (funcion.getTipo()) {
             case 'imprimir':
                 console.log(funcion.getParam1());
+                consola += funcion.getParam1() + '\n';
                 break;
             case 'conteo':
                 console.log(datos.getOperaciones().length);
+                consola += datos.getOperaciones().length + '\n';            
                 break;
             case 'promedio':
                 var promedio = anMat.calcularPromedio(datos.getOperaciones(), funcion.getParam1());
                 console.log(promedio);
+                consola += promedio + '\n';
                 break;
             case 'max':
                 var max = anMat.calcularMax(datos.getOperaciones(), funcion.getParam1());
                 console.log(max);
+                consola += max + '\n';
                 break;
             case 'min':
                 var min = anMat.calcularMin(datos.getOperaciones(), funcion.getParam1());
                 console.log(min);
+                consola += min + '\n';
                 break;
             case 'generarReporte':
                 switch (funcion.getParam1()) {
@@ -98,4 +104,6 @@ let anSin = new AnalizadorSintactico();
 let anMat = new AnalizadorMatematico();
 let genHTML = new GeneradorDeHTML();
 let genGrap = new GeneradorDeDiagrama();
+
 let datos;
+let consola;

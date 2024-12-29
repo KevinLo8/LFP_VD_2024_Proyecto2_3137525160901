@@ -1,0 +1,43 @@
+# Gramática Libre de contexto
+
+#### &#10216; Programa &#10217; ::= &#10216; Declaración &#10217; | &#10216; Declaración &#10217; &#10216;Programa&#10217;
+
+#### &#10216; Declaración &#10217; ::= &#10216; Declaración Arreglo &#10217; | &#10216; Declaración Función &#10217;
+
+#### &#10216; Declaración Arreglo &#10217; ::= " Operaciones " ' = ' ' [ ' &#10216; Declaración Operación &#10217; ' ] ' | &#10216; Tipo de Configuración &#10217; ' = ' ' [ ' &#10216; Declaración Configuración &#10217; ' ] '
+
+#### &#10216; Declaración Operación &#10217; ::= &#10216; Operación &#10217; | &#10216; Operación &#10217; ' , ' &#10216; Declaración Operacion &#10217;
+
+#### &#10216; Operación &#10217; ::= ' { ' &#10216; Dato &#10217; ' , ' &#10216; Dato &#10217; ' , ' &#10216; Dato &#10217; [ ' , ' &#10216; Dato &#10217; ] ' } '
+
+#### &#10216; Dato &#10217; ::= " operacion " ' : ' &#10216; Tipo de Operacion &#10217; | " nombre " ' : ' &#10216; Cadena &#10217; | ( " valor1 " | " valor2 " ) ' : ' &#10216; Valor &#10217;
+
+#### &#10216; Tipo de Operación &#10217; ::= " suma " | " resta " | " multiplicacion " | " division " | " potencia " | " raiz " | " inverso " | " seno " | " coseno " | " tangente " | "mod "
+
+#### &#10216; Valor &#10217; ::= &#10216; Numero &#10217; | &#10216; Sub-Operación &#10217;
+
+#### &#10216; Sub-Operación &#10217; ::= ' { ' &#10216; Dato &#10217; ' , ' &#10216; Dato &#10217; [ ' , ' &#10216; Dato &#10217; ] ' } '
+
+#### &#10216; Tipo de Configuración &#10217; ::= " ConfiguracionesLex " | " ConfiguracionesParser "
+
+#### &#10216; Declaración Configuración &#10217; ::= &#10216; Configuració &#10217; ' , ' &#10216; Configuració &#10217; ' , ' &#10216; Configuració &#10217; ' , ' &#10216; Configuració &#10217;
+
+#### &#10216; Configuració &#10217; ::= ( " fondo " | " fuente " ) ' : ' &#10216; Cadena &#10217; | " forma " ' : ' &#10216;  Forma &#10217; | " tipoFuente " ' : ' &#10216;  Tipo Fuente &#10217;
+
+#### &#10216; Forma &#10217; ::= " circle " | " diamond " | " triangle " | " box "
+
+#### &#10216; Tipo Fuente &#10217; ::=  " Arial " | " Times-Roman "
+
+#### &#10216; Declaración Funcion &#10217; ::= &#10216; Función Imprimir &#10217; | &#10216; Función Conteo &#10217; | &#10216; Función Matemarica &#10217; | &#10216; Función Reporte &#10217;
+
+#### &#10216; Función Imprimir &#10217; ::= " imprimir " ' ( ' &#10216; Cadena &#10217; ' ) '
+
+#### &#10216; Función Conteo &#10217; ::= " conteo " ' ( ' ' ) '
+
+#### &#10216; Función Matematica &#10217; ::= &#10216; Tipo de Función Matematica &#10217; ' ( ' &#10216; Tipo de Operación &#10217; ' ) '
+
+#### &#10216; Tipo de Función Matematica &#10217; ::= " promedio " | " max " | " min "
+
+#### &#10216; Función Reporte &#10217; ::= " generarReporte " ' ( ' [ &#10216; Comandos &#10217; ] ' ) '
+
+#### &#10216; Comandos &#10217; ::= &#10216; Tipo de Reporte &#10217; | &#10216; Tipo de Reporte &#10217; ' , ' &#10216; Cadena &#10217;

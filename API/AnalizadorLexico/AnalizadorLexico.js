@@ -91,6 +91,8 @@ class AnalizadorLexico {
                     guardarToken(palabra, 'Forma');
                 } else if(esTipoFuente(palabra)) {
                     guardarToken(palabra, 'Tipo Fuente');
+                } else if(esColor(palabra)) {
+                    guardarToken(palabra, 'Color');
                 } else {
                     guardarToken(palabra, 'Cadena');
                 }
@@ -228,6 +230,21 @@ function esTipoFuente(palabra) {
     return false;
 }
 
+function esColor(palabra) {
+    if (!palabra.charAt(0).match("\"") || !palabra.charAt(palabra.length - 1).match("\"")) {
+        return false;
+    }
+    if (!palabra.charAt(1).match("#")) {
+        return false;
+    }
+    for (let index = 2; index < 8; index++){
+        if (!esNumeroHexadecimal(palabra.charAt(index))) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function esLetra(palabra) {
     if (palabra.charCodeAt(0) > 64 && palabra.charCodeAt(0) < 91) {
         return true;
@@ -246,6 +263,16 @@ function esLetra(palabra) {
 
 function esNumero(palabra) {
     if (palabra.charCodeAt(0) > 47 && palabra.charCodeAt(0) < 58) {
+        return true;
+    }
+    return false;
+}
+
+function esNumeroHexadecimal(palabra) {
+    if (palabra.charCodeAt(0) > 47 && palabra.charCodeAt(0) < 58) {
+        return true;
+    }
+    if (palabra.charCodeAt(0) > 96 && palabra.charCodeAt(0) < 103) {
         return true;
     }
     return false;

@@ -8,10 +8,10 @@ class GeneradorDeDiagrama {
 
     generarDiagrama(operaciones, configuracion) {
 
-        fondo = configuracion.getFondo();
-        fuente = configuracion.getFuente();
-        forma = configuracion.getForma();
-        tipoFuente = configuracion.getTipoFuente();
+        fondo = configuracion.getFondo().substring(1, configuracion.getFondo().length - 1);
+        fuente = configuracion.getFuente().substring(1, configuracion.getFuente().length - 1);
+        forma = configuracion.getForma().substring(1, configuracion.getForma().length - 1);
+        tipoFuente = configuracion.getTipoFuente().substring(1, configuracion.getTipoFuente().length - 1);
 
         var g = graphviz.digraph("G");
         i = 1;
@@ -92,6 +92,5 @@ function crearSubNodos(g, n, operacion) {
 
 let i;
 let fondo, fuente, forma, tipoFuente;
-let diagrama;
 
 module.exports = GeneradorDeDiagrama;
