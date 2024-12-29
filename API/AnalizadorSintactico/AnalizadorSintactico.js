@@ -197,7 +197,7 @@ function revisarDeclaracionOperaciones(tokens) {
             token = tokens[numero];
             if (token.getTipo() == 'Agrupación') {
                 numero--;
-                let subOperacion = RevisarSubOperacion(tokens);
+                let subOperacion = revisarSubOperacion(tokens);
                 if (estado == 3) {
                     valor1 = subOperacion;
                 } else if (estado == 4) {

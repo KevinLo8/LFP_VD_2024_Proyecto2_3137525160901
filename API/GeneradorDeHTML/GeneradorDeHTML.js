@@ -92,21 +92,25 @@ class GeneradorDeHTML {
             texto = texto.concat('                <th>Columna</th>\n');
             texto = texto.concat('            </tr>\n');
     
-            do {
-                let error = errores[num];
-    
-                texto = texto.concat('            <tr>\n');
-                texto = texto.concat('                <td>' + (index + 1) + '</td>\n');
-                texto = texto.concat('                <td>' + error.getLexema() + '</td>\n');
-                texto = texto.concat('                <td>' + error.getTipo() + '</td>\n');
-                texto = texto.concat('                <td>' + error.getFila() + '</td>\n');
-                texto = texto.concat('                <td>' + error.getColumna() + '</td>\n');
-                texto = texto.concat('            </tr>\n');
-                texto = texto.concat('\n');
+            try {
+                while (errores[num].getTipo() == 'Error Lexico') {
+                    let error = errores[num];
+        
+                    texto = texto.concat('            <tr>\n');
+                    texto = texto.concat('                <td>' + (num + 1) + '</td>\n');
+                    texto = texto.concat('                <td>' + error.getLexema() + '</td>\n');
+                    texto = texto.concat('                <td>' + error.getTipo() + '</td>\n');
+                    texto = texto.concat('                <td>' + error.getFila() + '</td>\n');
+                    texto = texto.concat('                <td>' + error.getColumna() + '</td>\n');
+                    texto = texto.concat('            </tr>\n');
+                    texto = texto.concat('\n');
 
-                num++;
-            } while (num < errores.length || errores[num].getTipo() == 'Error Lexico');
-    
+                    num++;
+                }
+            } catch (error) {
+
+            }
+
             texto = texto.concat('        </table>\n');    
 
             texto = texto.concat('\n');
@@ -120,11 +124,11 @@ class GeneradorDeHTML {
             texto = texto.concat('                <th>Columna</th>\n');
             texto = texto.concat('            </tr>\n');
     
-            do {
+            while (num < errores.length) {
                 let error = errores[num];
     
                 texto = texto.concat('            <tr>\n');
-                texto = texto.concat('                <td>' + (index + 1) + '</td>\n');
+                texto = texto.concat('                <td>' + (num + 1) + '</td>\n');
                 texto = texto.concat('                <td>' + error.getLexema() + '</td>\n');
                 texto = texto.concat('                <td>' + error.getTipo() + '</td>\n');
                 texto = texto.concat('                <td>' + error.getFila() + '</td>\n');
@@ -133,7 +137,7 @@ class GeneradorDeHTML {
                 texto = texto.concat('\n');
 
                 num++;
-            } while (num < errores.length);
+            }
     
             texto = texto.concat('        </table>\n');    
         }

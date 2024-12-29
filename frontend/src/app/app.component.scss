@@ -1,0 +1,45 @@
+textarea {
+    width: 800px;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #09b900;
+}
+
+table {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #f4f4f4;
+    text-align: center;
+}

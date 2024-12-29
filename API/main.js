@@ -20,7 +20,7 @@ app.use(express.text());
 app.use(cors());
 
 app.post('/Analizar', (req, res) => {
-    try {
+        try {
         
         datos = new Datos();
 
